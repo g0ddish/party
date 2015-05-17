@@ -255,6 +255,7 @@ $lolarray = array(
             </div><script language="javascript" src=
             "//scripts.poll-maker.com/3012/scpolls.js"></script>        </div>
 
+        <img class="img-circle" src="./liquor.jpg" style="margin: 30px 0" />
     </div>
     </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

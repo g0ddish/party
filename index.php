@@ -94,10 +94,21 @@ function loadPictures($session, $attendee){
 </head>
 <body style="background: #0065A4; color: #ffffff;">
 <div class="container text-center">
-    <h1>Hello, world! We're having a party, here is who's attending.</h1>
-    <h2>Please vote on where we should hold the event.</h2>
     <div class="container-fluid">
         <div class="row">
+            <h1>T127 grad party, here is who's attending.</h1>
+            <?php foreach($graphObject->asArray()['data'] as $attendee): ?>
+
+                <div class="col-md-3">
+                    <p><?php echo $attendee->name; ?></p>
+                    <?php
+                    loadPictures($session, $attendee);
+                    ?>
+                </div>
+            <?php endforeach; ?>
+        </div>
+        <div class="row">
+            <h2>Vote on where we should hold the event.</h2>
             <div id="qp_all315374" style="width:100%;">
                 <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'
                       type='text/css'><style>
@@ -201,17 +212,7 @@ function loadPictures($session, $attendee){
                 </div>
             </div><script language="javascript" src=
             "//scripts.poll-maker.com/3012/scpolls.js"></script>        </div>
-        <div class="row">
-        <?php foreach($graphObject->asArray()['data'] as $attendee): ?>
 
-        <div class="col-md-3">
-            <p><?php echo $attendee->name; ?></p>
-            <?php
-            loadPictures($session, $attendee);
-            ?>
-        </div>
-        <?php endforeach; ?>
-        </div>
     </div>
     </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

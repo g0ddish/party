@@ -63,6 +63,10 @@ $lolarray = array(
      "I thought I wouldn't have to see any of these people again.",
      "I graduated with a 6.0 GPA",
      "Pazez???",
+     "My 9-5 I do ASP.NET",
+     "Open source Dot Net anyone?",
+     "Visual Studio Code is the bomb",
+     "Echo 'Hello World'",
 );
 
 

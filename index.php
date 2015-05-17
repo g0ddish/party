@@ -64,10 +64,8 @@ function loadPictures($session, $attendee){
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Convocation Party</title>
 
-    <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -77,8 +75,8 @@ function loadPictures($session, $attendee){
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
-<div class="container">
+<body style="background: #0065A4; color: #ffffff;">
+<div class="container text-center">
     <h1>Hello, world! We're having a party, here is whos attending.</h1>
     <div class="container-fluid">
         <div class="row">
@@ -92,14 +90,8 @@ function loadPictures($session, $attendee){
         </div>
         <?php endforeach; ?>
         </div>
-    <pre>
-    <?php print_r($graphObject->asArray()['data']);
-
-    ?>
-        </pre>
     </div>
     </div>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>

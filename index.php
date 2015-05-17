@@ -77,7 +77,8 @@ function loadPictures($session, $attendee){
 </head>
 <body style="background: #0065A4; color: #ffffff;">
 <div class="container text-center">
-    <h1>Hello, world! We're having a party, here is whos attending.</h1>
+    <h1>Hello, world! We're having a party, here is who's attending.</h1>
+    <h2>A vote will appear here on 5/17/2015 for locations/</h2>
     <div class="container-fluid">
         <div class="row">
         <?php foreach($graphObject->asArray()['data'] as $attendee): ?>

@@ -69,7 +69,6 @@ $graphObject = $response->getGraphObject();
 </head>
 <body>
 <div class="container">
-
     <h1>Hello, world! We're having a party, here is whos attending.</h1>
     <div class="container-fluid">
     <pre>

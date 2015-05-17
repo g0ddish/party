@@ -54,6 +54,16 @@ function loadPictures($session, $attendee){
     echo "<img src ='" . $graphObjectpic->asArray()['url'] . "' />'";
 }
 
+$lolarray = array(
+     "College was the worst time of my life!",
+     "I hate programming",
+     "Lets get so drunk so I can forget",
+     "We're done!",
+     "Is this open bar?",
+     "I thought I wouldn't have to see any of these people again.",
+     "f",
+     "d",
+);
 
 
 ?>
@@ -94,17 +104,39 @@ function loadPictures($session, $attendee){
 </head>
 <body style="background: #0065A4; color: #ffffff;">
 <div class="container text-center">
-    <div class="container-fluid">
+    <div class="container-fluid" style="color: #000000;">
         <div class="row">
-            <h1>T127 grad party, here is who's attending.</h1>
-            <?php foreach($graphObject->asArray()['data'] as $attendee): ?>
+            <h1>T127 grad party, with some memorable faces!</h1>
+            <?php
+            $count = 0;
+            foreach($graphObject->asArray()['data'] as $attendee):
+                $count++;
+            ?>
+                <div class="col-md-4 col-sm-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
 
-                <div class="col-md-3">
                     <p><?php echo $attendee->name; ?></p>
                     <?php
+                    $rand_key = array_rand($lolarray, 1);
                     loadPictures($session, $attendee);
                     ?>
+                    <p><blockquote>
+                        <p><?php echo $lolarray[$rand_key]; ?>
+                            </p>
+                        <footer><?php echo $attendee->name; ?></footer>
+                    </blockquote></p>
                 </div>
+                    </div>
+                </div>
+
+                <?php if ($count % 3 == 0){
+                echo "<div class='clearfix visible-lg visible-md'></div>";
+            }elseif($count % 2 == 0){
+                echo "<div class='clearfix visible-sm visible-xs'></div>";
+            }
+                ?>
+
             <?php endforeach; ?>
         </div>
         <div class="row">

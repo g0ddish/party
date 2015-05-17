@@ -83,7 +83,7 @@ function loadPictures($session, $attendee){
         <?php foreach($graphObject->asArray()['data'] as $attendee): ?>
 
         <div class="col-md-3">
-            <?php echo $attendee->name; ?>
+            <p><?php echo $attendee->name; ?></p>
             <?php
             loadPictures($session, $attendee);
             ?>

@@ -43,6 +43,16 @@ $request = new FacebookRequest(
 $response = $request->execute();
 $graphObject = $response->getGraphObject();
 
+function loadPictures($session, $attendee){
+    $requestpic = new FacebookRequest(
+        $session,
+        'GET',
+        '/'. $attendee->id .'/picture?redirect=false'
+    );
+    $responsepic = $requestpic->execute();
+    $graphObjectpic = $responsepic->getGraphObject();
+    echo "<img src ='" . $graphObjectpic->asArray()['url'] . "' />'";
+}
 
 
 
@@ -71,8 +81,21 @@ $graphObject = $response->getGraphObject();
 <div class="container">
     <h1>Hello, world! We're having a party, here is whos attending.</h1>
     <div class="container-fluid">
+        <div class="row">
+        <?php foreach($graphObject->asArray()['data'] as $attendee): ?>
+
+        <div class="col-md-3">
+            <?php echo $attendee->name; ?>
+            <?php
+            loadPictures($session, $attendee);
+            ?>
+        </div>
+        <?php endforeach; ?>
+        </div>
     <pre>
-    <?php print_r($graphObject); ?>
+    <?php print_r($graphObject->asArray()['data']);
+
+    ?>
         </pre>
     </div>
     </div>

@@ -61,8 +61,8 @@ $lolarray = array(
      "We're done!",
      "Is this open bar?",
      "I thought I wouldn't have to see any of these people again.",
-     "f",
-     "d",
+     "I graduated with a 6.0 GPA",
+     "Pazez???",
 );
 
 
